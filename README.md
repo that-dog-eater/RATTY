@@ -26,7 +26,7 @@ Have the Exe payload and the PDF on a github repo make sure the dropper is conne
 3. Send to Target!
 
 
-###Cons 
+### Cons 
 - no obfuscation
 - no loader
 - not a certified script = smart screen pop-up
