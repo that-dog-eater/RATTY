@@ -10,7 +10,8 @@ Dropper --> Payload --> <- C2
   
 ### Payload:
   This payload is in C# so it must be built using dotnet command that keeps it as a standalone binary with no Dll's attached - command for compiling will be shown under these instructions, the shell.cs is the paylaod and will need to have the VPS servers IP added to the file. The Payload Exe after compiling will be uploaded to a github and downloaded by the dropper. 
-    - dotnet publish -c Release -r win-x64 --self-contained true /p:PublishSingleFile=true /p:IncludeNativeLibrariesForSelfExtract=true
+    
+  - dotnet publish -c Release -r win-x64 --self-contained true /p:PublishSingleFile=true /p:IncludeNativeLibrariesForSelfExtract=true
 
 ### C2: 
   The C2 must run a on VPS server and needs to run in the background. Open ports for the Reverse shell to access the C2 server.
