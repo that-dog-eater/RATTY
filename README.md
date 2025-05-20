@@ -31,3 +31,9 @@ Have the Exe payload and the PDF on a github repo make sure the dropper is conne
 - no loader
 - not a certified script = smart screen pop-up
 - no persistance
+
+### Requirments
+- .NET 9.0 installed
+- dotnet added to Path for compiling
+- VPS server
+- GitHub account to host PDF + EXE 
