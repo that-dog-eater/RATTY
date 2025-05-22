@@ -112,7 +112,7 @@ Available Commands:
 def start_server():
 
 
-    host = 'SERVER_IP_HERE'#----fix-----
+    host = '0.0.0.0' # listens on all interfaces
     port = PORT_NUMBER #----fix-----
 
 
