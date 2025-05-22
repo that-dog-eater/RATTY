@@ -11,17 +11,17 @@ Dropper --> Payload --> <- C2
   - Add link to EXE
 ### Payload:
   This payload is in C# so it must be built using dotnet command that keeps it as a standalone binary with no Dll's attached - command for compiling will be shown under these instructions, the shell.cs is the paylaod and will need to have the VPS servers IP and selected port added to the file. The Payload Exe after compiling will be uploaded to a github and downloaded by the dropper. 
-  - Add Port + Server IP
+  - Add Port + Server IP + Compile using:
   
   1.     dotnet publish -c Release -r win-x64 --self-contained true /p:PublishSingleFile=true /p:IncludeNativeLibrariesForSelfExtract=true
 
 ### C2: 
-  The C2 must run on a VPS server and needs to run in the background. Open ports for the Reverse shell to access the C2 server.
+  The C2 must run on a VPS server and needs to run in the background. Open ports for the Reverse shell to access the C2 server. The comands below are for a ubuntu server
   -  Add port to C2.py
 
   #### C2 config Setup:
 
-  Install tmux / git / and the C2.py onto the UBUNTO server 
+  Install tmux / git / and the C2.py onto the ubuntu server 
   1.     sudo apt update && sudo apt install tmux -y
   2.     sudo apt update && sudo apt install git -y
   3.     wget https://raw.githubusercontent.com/username/path/to/file.py
