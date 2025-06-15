@@ -6,7 +6,7 @@ Dropper --> Payload --> <- C2
 ## Setup
 
 ### Dropper:
-  Need to add 2 links, the first to the pdf that will be loaded at runtime and the other will be to downlaod the Exe and execute. Dropper will be sent on its own to the target so it must be the file zipped with a password.
+  Need to add 2 links, the first to the pdf that will be loaded at runtime and the other will be to downlaod the Exe and execute. Dropper will be sent on its own to the target so it must be the file zipped with a password. Host the PDF on a google drive with a sharable link. 
   - Add link to PDF
   - Add link to EXE
 ### Payload:
@@ -24,7 +24,10 @@ Dropper --> Payload --> <- C2
   Install tmux / git / and the C2.py onto the ubuntu server 
   1.     sudo apt update && sudo apt install tmux -y
   2.     sudo apt update && sudo apt install git -y
-  3.     wget https://raw.githubusercontent.com/username/path/to/file.py
+
+
+  3.     pscp -i path\to\privatekey.ppk path\to\localfile username@C2-server-IP:/path/on/server
+  - Sends the C2.py to the server
 
   setup the script to run in the background with tmux
   
@@ -52,6 +55,13 @@ Dropper --> Payload --> <- C2
 
 		See Firewall rules:
   2.     sudo iptables -L
+
+Host the Shell.exe on the server 
+
+1.     sudo apt install nginx
+		sudo cp myfile.exe /var/www/html/
+		sudo chmod 644 /var/www/html/myfile.exe
+		sudo systemctl restart nginx
 
 ## Final
 
