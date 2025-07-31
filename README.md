@@ -65,7 +65,7 @@ Host the Shell.exe on the server
 
 ## Final
 
-Have the Exe payload and the PDF on a github repo make sure the dropper is connected and the paylaod is configered to connect back to the C2 VPS server correctly. 
+Have the Exe payload hosted on the vps server and the PDF on goodle drive, make sure the dropper is connected and the paylaod is configered to connect back to the C2 VPS server correctly. 
 1. VPS running
 2. Zip Dropper + Password Protected
   - Ctrl + shift + rigth click -> 7zip hover -> add to archive -> create password = zip with password
