@@ -55,6 +55,7 @@ Dropper --> Payload --> <- C2
 
 		See Firewall rules:
   2.     sudo iptables -L
+### Exe Server
 
 Host the Shell.exe on the server 
 
@@ -62,6 +63,9 @@ Host the Shell.exe on the server
 		sudo cp myfile.exe /var/www/html/
 		sudo chmod 644 /var/www/html/myfile.exe
 		sudo systemctl restart nginx
+
+Polymorphic Modual 
+1.     
 
 ## Final
 
@@ -72,14 +76,9 @@ Have the Exe payload hosted on the vps server and the PDF on goodle drive, make 
 3. Send to Target!
 
 
-### Cons 
-- no obfuscation
-- no loader
-- not a certified script = smart screen pop-up
-- no persistance
-
 ### Requirments
 - .NET 9.0 installed
 - dotnet added to Path for compiling
 - VPS server
-- GitHub account to host PDF + EXE 
+- server to host EXE
+- Drive link to PDF 
