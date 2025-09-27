@@ -62,3 +62,6 @@ setup the script to run in the background with tmux
 - Git on server
 - tmux on server
 - nginx on server
+
+# IMPORTANT
+- Loader.vbs is broken so just continue this setup without it and just use the exe.
